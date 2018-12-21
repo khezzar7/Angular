@@ -1,0 +1,9 @@
+<div class="row" *ngFor="let product of products; let i = index">
+   <div class="col-4"><img class ="w-50" src="{{product.photo}}" alt=""></div> <br>
+    <div class="col-4"><h1>{{product.title}}</h1></div><br>
+    <div class="col-4"><p>{{product.content}}</p></div><br>
+    <div class="col-4"><h3>{{product.price}} euros</h3></div><br>
+    <div class="col-4">
+      <button class="btn btn-warning"(click)="supprimer()">Supprimer</button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="card col-8" [ngClass]="{'bg-success': post.like>post.unlike, 'bg-danger' : post.unlike>post.like}">
+    <div class="card-body" >
+        <h1>{{post.title | uppercase}}</h1><br>
+        {{post.content}}<br>
+        {{post.author}}<br>
+        {{post.dateCreated| date:'shortDate'}}<br>
+        <button class="btn btn-primary"(click)="like()"><p>{{post.like}}</p>like</button>&nbsp;
+        <button class="btn btn-danger"(click)="unlike()"><p>{{post.unlike}}</p>unlike</button>&nbsp;
+        <button class="btn btn-warning" *ngIf="connect">Edit</button>
+    </div>
+</div>
+
+

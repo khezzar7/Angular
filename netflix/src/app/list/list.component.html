@@ -1,0 +1,14 @@
+<div class="container">
+<div class="row">
+  <div class="col-4" *ngFor="let serie of series">
+    
+    <img class="w-100" src="{{serie.values.img}}" alt="">
+     <h1>{{serie.values.title}}</h1><br>  
+      <p> Key:{{serie.key}}</p> <br>
+      <h2>{{serie.values.categorie}}</h2>
+      <p>{{serie.values.content}}</p>
+   
+    
+      <a [routerLink]="['/serie',serie.key]">Modifier</a> 
+</div>
+</div>

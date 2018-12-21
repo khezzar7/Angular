@@ -1,0 +1,8 @@
+<div class="row" *ngFor="let product of products; let i=index">
+  <div class="col-4">{{product.title}}</div>
+  <div class="col-4">
+  <img width=50 src="{{product.photo}}" alt="">
+  </div>
+  <div class="col-4">{{product.price}}</div>
+  <div><button class="btn btn-success" (click)="panier(i)">Ajouter</button></div>
+</div>

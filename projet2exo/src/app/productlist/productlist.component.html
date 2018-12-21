@@ -1,0 +1,11 @@
+
+
+<div class="row">
+  <div class="col-4" *ngFor="let product of products; let i = index">
+    <img class ="w-100" src="{{product.photo}}" alt=""><br>
+      <h1>{{product.title}}</h1><br>
+      <p>{{product.content}}</p><br>
+      <h3>{{product.price}} euros</h3><br>
+      <button class="btn btn-success" *ngIf="this.productService.login" (click)="panier(i)">Panier</button>
+  </div>
+</div>

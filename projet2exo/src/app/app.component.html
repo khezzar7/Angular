@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <nav>
+    
+      <a routerLink="/" class="btn btn-primary">Home</a>&nbsp;
+      <a routerLink="/gestion" class="btn btn-primary" *ngIf='login===true'>Gestion</a>&nbsp;
+      <a routerLink="/add" class="btn btn-primary" *ngIf='login===true'>Add-product</a>&nbsp;
+     
+
+    </nav><br>
+  <button class="btn float-right btn-success" *ngIf="login === false" (click)="connexion()">Connexion</button>
+  <button class="btn float-right btn-success" *ngIf="login" (click)="deconnexion()">Deconnexion</button>
+</div>
+ <router-outlet></router-outlet>
+
